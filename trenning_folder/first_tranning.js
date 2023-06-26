@@ -62,3 +62,16 @@ function yearDays(year)
   if ( Math.abs(year % 4) == 0) return `${year} has 366 days`
 }
 console.log(yearDays(1400));
+//////// 2 solution :
+function yearDays(year) {
+  let nDays =  year % 4 ? 365 :
+               year % 100 ? 366:
+               year % 400 ? 365 : 366;
+  
+  return `${year} has ${nDays} days`;
+}
+
+//////// 3 solution:
+function yearDays(year) {
+  return year + ' has ' + (!(year % 100) && year % 400 || year % 4 ? '365' : '366') + ' days';
+}
