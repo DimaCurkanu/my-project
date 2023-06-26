@@ -82,3 +82,8 @@ function yearDays(year) {
 function triangular( n ) {
   return n < 0 ? 0 : n * (n + 1) / 2;
 }
+
+///////// сократить до 137 знаков
+function describeAge(age) {
+  return "You're a(n) " + (age < 13 ? "kid" : age < 18 ? "teenager" : age < 65 ? "adult" : "elderly")
+} 
