@@ -114,3 +114,12 @@ return respond;
 function bonusTime(salary, bonus) {
   return bonus ? `£${salary *10}` : `£${salary}`
   }
+  ////////////
+  var ownedCatAndDog = function(catYears, dogYears) {
+    let c = catYears == 1 ? 15: catYears == 2 ? 24 : 24 + (catYears - 2) * 4;
+    let d = dogYears == 1 ? 15: dogYears == 2 ? 24 : 24 + (dogYears - 2) * 5;
+    
+    return [c, d];
+  }
+  console.log(ownedCatAndDog(56, 64));
+
