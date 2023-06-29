@@ -145,5 +145,28 @@ console.log(isPowerOfTwo(1024));
 ///   OR  /////
 function isPowerOfTwo(n){
   return Number.isInteger(Math.log2(n));
-  
 }
+
+/////
+// Find the difference between the sum of the squares of 
+// the first n natural numbers (1 <= n <= 100) 
+// and the square of their sum.
+function differenceOfSquares(n){
+  let i = 1;
+  let sum = 0;
+  let squ = 0;
+while (i <= n) {
+  sum = sum + i;
+  squ = squ  +  i ** 2;
+  i++;
+}
+return sum ** 2 - squ
+}
+console.log(differenceOfSquares(10));
+/////// самое короткое решение    ////////////////////
+differenceOfSquares=x=>x*(x*x-1)*(3*x+2)/12 
+///////////
+function differenceOfSquares(x){
+  return Math.pow((x*(x+1)/2), 2) - (x*(x+1)*(2*x+1)/6);
+}
+/////////////////////
