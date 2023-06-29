@@ -76,3 +76,17 @@ function basicOp(operation, value1, value2)
 {
   return eval(value1 + operation + value2);
 }
+//////////////////////////////////////////
+function calculator(a,b,sign){
+  var res;
+    if (typeof(a) !== 'number' || typeof(b) !== 'number' ) return  `"unknown value", "calculate"`;
+    switch (sign) {
+        case "+": res = a + b; break;
+        case "-": res = a - b; break;
+        case "/": res = a / b; break;
+        case "*": res = a * b; break;
+        default: res = `"unknown value"`;
+    }
+  return res + ',' + ' '+ '"calculate"'
+  }
+  console.log(calculator(1, 2,"+"));
