@@ -132,3 +132,18 @@ function bonusTime(salary, bonus) {
 function solve(s,g){
   return   s %g == 0 ?  [g,s-g] : -1
 }
+
+/////////////// является ли N степенью двойки ????
+function isPowerOfTwo(n){
+  let r = 2;
+  while (r < n) {
+    r *= 2
+  }
+  return (r == n)
+}
+console.log(isPowerOfTwo(1024));
+///   OR  /////
+function isPowerOfTwo(n){
+  return Number.isInteger(Math.log2(n));
+  
+}
