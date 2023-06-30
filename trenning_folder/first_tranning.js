@@ -230,3 +230,25 @@ function calculateYears(pr, int, tax, des) {
 }
 
 calculateYears(1000, 0.05, 0.18, 1100)
+
+////////////////////////////////////////////
+function remainder (D, d) {
+  let i = 0;
+  let f = D / d;
+  console.log(f);
+  console.log(f.toString().split('.').pop().length);
+while (f.toString().split('.').pop().length >= 0)
+{
+ f = (D - i) / d; // D = D - i; 
+ i++;
+}  
+  return i;
+}
+console.log(remainder(34,7));
+///////////////////////////// SUPER SOLUTION ?????????? //////
+function remainder (D, d){
+  while(D >= d) {
+    D -= d;
+  }
+return D;
+}
