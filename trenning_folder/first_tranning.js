@@ -252,3 +252,34 @@ function remainder (D, d){
   }
 return D;
 }
+/////////////////
+// Just as the title suggestes :D . For example ->
+
+// largest(1); //Should return 7
+// largest(2); //Should return 97
+// ....
+// Do not mind the pattern as it is just an incident ! And make sure to return false 
+// if the input is not an integer :D This might seem simple at first, it is, but keep 
+// an eye on the performance. Go for it !
+
+var largest = (n) => {
+  // "use strict";
+  //GOOOOD LUCK ! 
+  if (n == 0 || n == null) return false;
+  if (n.toString().includes('.') || typeof(n) !== 'number') return false;
+  if (n == 1) return 7;
+  let s = 7;
+  while (s.toString().length < n) {
+    s = +('9' + s);
+  }
+  return s
+}
+console.log(largest(null));
+////////////// right solution ///////
+//Largest prime number containing n digit
+var largest = (n) => {
+  if (typeof n!='number' || n<=0)
+    return false;
+  var arr=[7,97,997,9973,99991,999983,9999991];
+  return arr[n-1];
+}
