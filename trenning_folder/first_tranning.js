@@ -170,3 +170,42 @@ function differenceOfSquares(x){
   return Math.pow((x*(x+1)/2), 2) - (x*(x+1)*(2*x+1)/6);
 }
 /////////////////////
+
+// My friend John likes to go to the cinema. He can choose between system A and system B.
+
+// System A : he buys a ticket (15 dollars) every time
+// System B : he buys a card (500 dollars) and a first ticket for 0.90 times the ticket price, 
+// then for each additional ticket he pays 0.90 times the price paid for the previous ticket.
+// Example:
+// If John goes to the cinema 3 times:
+
+// System A : 15 * 3 = 45
+// System B : 500 + 15 * 0.90 + (15 * 0.90) * 0.90 + (15 * 0.90 * 0.90) * 0.90 
+// ( = 536.5849999999999, no rounding for each ticket)
+function movie(card, ticket, perc) {
+  let i = 0;
+  let a = ticket;
+  let c = ticket * perc;
+  let b = card + c;
+  while (a < Math.ceil(b)) {
+   a = ticket * i
+   c = c * perc;
+   b = b + c;
+   i++
+  }
+  return i-1;
+};
+
+console.log(movie(100, 10, 0.95)); // , 43)
+
+function movie(card, ticket, perc) {
+  var costA = n = 0,
+      costB = card;
+  while (Math.ceil(costB) >= costA) {
+      costA += ticket;
+      costB += ticket * Math.pow(perc,++n);
+  }
+  return n;
+};
+
+console.log(movie(100, 10, 0.95)); // , 43)
