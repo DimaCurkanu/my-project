@@ -209,3 +209,24 @@ function movie(card, ticket, perc) {
 };
 
 console.log(movie(100, 10, 0.95)); // , 43)
+
+// Mr. Scrooge has a sum of money 'P' that he wants to invest. 
+//Before he does, he wants to know how many years 'Y' this sum 'P' 
+//has to be kept in the bank in order for it to amount to a desired sum of money 'D'.
+
+// The sum is kept for 'Y' years in the bank where interest 'I' is paid yearly. 
+//After paying taxes 'T' for the year the new sum is re-invested.
+
+// Note to Tax: not the invested principal is taxed, but only the year's accrued interest
+
+function calculateYears(pr, int, tax, des) {
+  if (des <= pr) return 0;
+  let i = 0;
+  while (pr <= des) {
+   pr = pr + pr*(int - int * tax);
+   i++;
+  }
+  return i
+}
+
+calculateYears(1000, 0.05, 0.18, 1100)
