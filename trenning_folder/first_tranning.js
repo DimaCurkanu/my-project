@@ -283,3 +283,16 @@ var largest = (n) => {
   var arr=[7,97,997,9973,99991,999983,9999991];
   return arr[n-1];
 }
+
+////////////// factorial //////////////
+function factorial(n){
+  let answer = 1;
+  
+  while (n > 0) {
+    answer *= n;
+    n--;
+  }
+  
+  return answer;
+}
+ console.log(factorial(4));
