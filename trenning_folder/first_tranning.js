@@ -425,3 +425,15 @@ function numberOfDigits(n) {
   return k;
   }
     console.log(numberOfDigits(7));
+
+/////////////////////////////////////////////
+// за скольок дней ученик выучит n английских слов ? за первый день = 5, потом на 2 больше
+function englishWords(n){
+let d = 1;
+let w = 5;
+while (w <= n) {
+  w += 2;
+  d++
+}
+return d
+}
