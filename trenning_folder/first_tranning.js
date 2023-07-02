@@ -399,3 +399,17 @@ function powerOf3(n){
   return n % 3 == 0;
   }
   console.log(powerOf3(12));
+  ///////////////////////////////////
+///// посчитать сумму цифр в числе, не используя методы строк и массивов //////
+
+  function sumOfDigits(n) {
+    let a = n % 10;
+    let b = a;
+     while (n / 10 >= 1 ) {
+      n = n /10 - (n % 10)/10;
+      a = n % 10;
+      b = a + b;
+     }
+    return b;
+    }
+      console.log(sumOfDigits(73419));
