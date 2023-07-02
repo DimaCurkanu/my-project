@@ -375,3 +375,27 @@ function sum(n){
       return s 
       }
       console.log(sumOfOdd(20));
+      //////////////////////////////////////
+      function powerOf2(n){
+        let k = 0;
+        let s = 2 ** k;
+        while ( s <= n) {
+        s = 2 * s;
+        k++
+        }
+        return k - 1;
+        }
+        console.log(powerOf2(256));
+        console.log(2 ** 10);
+//////////////////////////////////////////
+function powerOf3(n){
+  //let k = 0;
+  //let s = n; 
+  while ( n / 3 >= 3) {
+  n = n /3;
+  //k++; 
+  console.log(n);
+  }
+  return n % 3 == 0;
+  }
+  console.log(powerOf3(12));
