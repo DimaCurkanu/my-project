@@ -401,7 +401,6 @@ function powerOf3(n){
   console.log(powerOf3(12));
   ///////////////////////////////////
 ///// посчитать сумму цифр в числе, не используя методы строк и массивов //////
-
   function sumOfDigits(n) {
     let a = n % 10;
     let b = a;
@@ -413,3 +412,16 @@ function powerOf3(n){
     return b;
     }
       console.log(sumOfDigits(73419));
+
+////// посчитать количество цифр в числе, не используя методы строк и массивов //////
+function numberOfDigits(n) {
+  let k = 1;
+  let a = n % 10;
+   while (n / 10 >= 1 ) {
+    n = n /10 - (n % 10)/10;
+    a = n % 10;
+    k++
+   }
+  return k;
+  }
+    console.log(numberOfDigits(7));
