@@ -354,3 +354,24 @@ function nextPrime(n){
   return n
 }
 console.log(nextPrime(12342355));
+///////////////
+function sum(n){
+  let s = 0;
+  while (n >=0) {
+  s = n + s;
+  n--
+  }
+  return s
+  }
+  console.log(sum(10));
+
+  function sumOfOdd(n){
+    if (n %2 == 0) { n = n - 1 }
+    let s = 0;
+      while (n >= 0) {
+      s = n + s;
+      n = n - 2
+      }
+      return s 
+      }
+      console.log(sumOfOdd(20));
