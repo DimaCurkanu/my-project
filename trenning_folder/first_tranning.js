@@ -437,3 +437,55 @@ while (w <= n) {
 }
 return d
 }
+////////////
+// Create a function named divisors/Divisors that takes an integer n > 1 and 
+// returns an array with all of the integer's divisors(except for 1 and the number itself), 
+// from smallest to largest. If the number is prime return the string '(integer) is prime' 
+// (null in C#) (use Either String a in Haskell and Result<Vec<u32>, String> in Rust).
+
+// Example:
+// divisors(12); // should return [2,3,4,6]
+// divisors(25); // should return [5]
+// divisors(13); // should return "13 is prime"
+function divisors(integer) {
+  let arr = [];
+  for ( let i = integer; i > 1; i--)
+  if (integer / i !== 1 && integer % i == 0) {
+    arr.push(integer / i);
+  }
+  if (arr.length == 0) return `${integer} is prime`;
+  return arr;
+}
+console.log(divisors(25));
+
+//////////////////////////////////////////////
+// Your task is to write a function which returns the sum of following series 
+// upto nth term(parameter).
+
+// Series: 1 + 1/4 + 1/7 + 1/10 + 1/13 + 1/16 +...
+// Rules:
+// You need to round the answer to 2 decimal places and return it as String.
+
+// If the given value is 0 then it should return 0.00
+
+// You will only be given Natural Numbers as arguments.
+
+
+function SeriesSum(n)
+{
+  if (n == 0) return "0.00"
+  let sum = 1;
+  for ( let i = 0; i < n-1; i++) {
+    let k = 1 / (4 + i * 3);
+    sum = sum + k;
+  }
+  return sum.toFixed(2)
+}
+console.log(SeriesSum(5));
+////////// more solutions /////////
+function SeriesSum(n) {
+  for (var s = 0, i = 0; i < n; i++) {
+    s += 1 / (1 + i * 3)
+  }
+  return s.toFixed(2)
+}
