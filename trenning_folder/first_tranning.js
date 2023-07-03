@@ -577,3 +577,29 @@ function sumTriangularNumbers(n) {
   return sum;
 }
 console.log(sumTriangularNumbers(6));
+
+
+///////////////////////////////////// I\n I==== not correct solution
+function drawStairs(n) {
+  let s = "I\n";
+   for (i = 0; i < n; i++) {
+     s += " ".repeat(i) + "I\n";
+   }
+   return s;
+ }
+ console.log(drawStairs(5));
+
+ ////////======================//////////
+ function drawStairs(n) {
+  // your code here
+  let stairs  = ""
+  for (let i = 0; i < n ; i++){
+    if (n-i == 1){
+      stairs += " ".repeat(i) + "I"
+    } else {
+      stairs += " ".repeat(i) + "I\n"
+      }
+  }
+  return stairs 
+}
+console.log(drawStairs(5));
