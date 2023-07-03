@@ -551,3 +551,29 @@ function getSum(a, b)
    return sum
 }
 console.log(getSum(0, 4));
+////////////////// more solutions
+function GetSum(a,b)
+{
+  return (Math.abs(a - b) + 1) * (a+b) / 2;
+}
+////////
+function GetSum( a,b )
+{
+   if (a == b) return a;
+   else if (a < b) return a + GetSum(a+1, b);
+   else return a + GetSum(a-1,b);
+}
+/////////////////
+// Your task is to return the sum of Triangular Numbers up-to-and-including 
+// the nth Triangular Number.
+// Triangular Number: "any of the series of numbers (1, 3, 6, 10, 15, etc.) obtained 
+// by continued summation of the natural numbers 1, 2, 3, 4, 5, etc."
+function sumTriangularNumbers(n) {
+  let sum = 0;
+  for (i = 0; i <= n; i++) {
+     c = (0.5 * i)*(i+1); 
+      sum += c;
+  }
+  return sum;
+}
+console.log(sumTriangularNumbers(6));
