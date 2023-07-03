@@ -603,3 +603,26 @@ function drawStairs(n) {
   return stairs 
 }
 console.log(drawStairs(5));
+////////////////
+//================== найті значеніе дробі a/b
+
+function fractional(n){
+  let a = 1;
+  let b = 1;
+  for (i = 2; i <= n; i++) {
+  a += i;
+  b *= i;
+  }
+  return +(a / b).toFixed(3)
+  }
+  console.log(fractional(4));
+
+  ///////// FIBONACHI=============///////////
+  function fibonacciNumbers(n){
+    let k = [0, 1];
+    for (i=2; i < n; i++) {
+    let a = k[k.length - 2] + k[k.length - 1];
+    k.push(a)
+    }
+    return k
+    }
