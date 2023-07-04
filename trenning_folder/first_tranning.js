@@ -706,4 +706,14 @@ function halvingSum(n) {
 }
 console.log(halvingSum(127));
 
-
+/////// сумма всех чисел от 10 до 99
+function sumOfTwoDigitsNumbers(){
+  let s = 0;
+  let k = 10;
+  do {
+  s += k;
+  k++;
+  }while (k <= 99);
+  return s
+  }
+console.log(sumOfTwoDigitsNumbers());
