@@ -675,3 +675,35 @@ function numberToPower(number, power) {
       result *= number;
   return result;
 }
+///-----------------------////////////-----------------/////
+// 
+function padIt(str,n){
+  while(n>0){
+    if(n%2 === 0) {
+      str = str + "*";
+    }else{
+      str = "*" + str;
+    }
+    n --;
+  }
+  return str;
+}
+console.log(padIt('a',5));
+///////----------------/////////////////
+// Given a positive integer n, calculate the following sum:
+// n + n/2 + n/4 + n/8 + ...
+// All elements of the sum are the results of integer division.
+function halvingSum(n) {
+  let s = n;
+  let a = 1;
+  do {
+    a = Math.floor(n / 2);
+    s = s + a;
+    n /=2;
+    //console.log(s);
+  } while ( n > 1)
+    return s;
+}
+console.log(halvingSum(127));
+
+
