@@ -651,3 +651,27 @@ function roundToNext5(n){
 }
   
 console.log(roundToNext5(12));
+
+//////////////========
+// The goal is to create a function of two inputs number and power, 
+//that "raises" the number up to power (ie multiplies number by itself power times).
+/// с помощью цикла do while
+function numberToPower(number, power){
+  //console.info(Math.log2(1024));
+  if (power == 0) return 1;
+  let s = number;
+  if (power == 1) return s;
+  do {
+    s *= number;
+    power--;
+  } while (power >= 2);
+  return s;
+}
+console.log(numberToPower(10, 4));
+/// с помощью for:
+function numberToPower(number, power) {
+  var result = 1;
+  for (let i = 0; i < power; ++i)
+      result *= number;
+  return result;
+}
