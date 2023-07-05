@@ -743,3 +743,20 @@ function running(n){
   return Math.round(n);
   }
 console.log(running(10));
+//////////////////////---------простой  процент банка - когда будет 1500 долл?---
+function bankPercent(p){
+  let s = 1000;
+  let b = s/100*p;
+  let y = 0;
+  //let x = s/100*p;
+  do {
+    //x = s/100*p;
+    s = s + b;
+    y++;
+   // console.log(x);
+    // console.log(s);
+    // console.log(y);
+  }while (s < 1500);
+  return y;
+}
+console.log(bankPercent(19));
