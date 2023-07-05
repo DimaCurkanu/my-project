@@ -717,3 +717,19 @@ function sumOfTwoDigitsNumbers(){
   return s
   }
 console.log(sumOfTwoDigitsNumbers());
+
+/////////// ----- царевна лягушка
+function frogPrincess(n){
+  let d = 1;
+  let q = n;
+  let k = 0;
+  do {
+    k += 3;
+    q = q + n + k;
+    console.log(q);
+    d++;
+
+  }while (q <= 1000);
+  return d
+  }
+console.log(frogPrincess(40));
