@@ -760,3 +760,15 @@ function bankPercent(p){
   return y;
 }
 console.log(bankPercent(19));
+
+//////////////////////---------капитализированний процент банка - какая сумма будет через n лет?---
+function bankPercent(money, percent, period){
+  let s = money;
+  let y = 1;
+  do {
+    s = s + s/100*percent;
+    y++;
+  } while ( y <= period);
+  return s.toFixed(2);
+}
+console.log(bankPercent(1000, 10, 3));
