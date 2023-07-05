@@ -799,3 +799,15 @@ function invertNumber(n){
   }while(n >= 1);
   return +res;
   }
+  //////////// массів із перевернутого чісла ////////
+  function arrayOfDigits(n){
+    let arr = [];
+    let a = 0;
+    do {
+      a = n%10;
+      arr.push(a);
+      n = Math.floor(n/10);
+    } while (n >= 1);
+    return arr;
+  }
+  console.log(arrayOfDigits(123456));
