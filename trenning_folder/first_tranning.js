@@ -772,3 +772,30 @@ function bankPercent(money, percent, period){
   return s.toFixed(2);
 }
 console.log(bankPercent(1000, 10, 3));
+
+///////////////// - превернуть чісло без методов строк і массівов----
+function invertNumber(n){
+  let a = 0;
+  let q = 0;
+  let s = 0;
+do {
+a =  (n % 10) 
+console.log(a);
+s = (s * 10 ** q + a) / 10 ** (q) 
+console.log(s);
+q++;
+n = (n - n%10) / 10;
+} while (n > 0)
+return s * 10 ** (q-1)
+}
+console.log(invertNumber(123));
+////////////-------------------////////////////
+/// best solution ////////
+function invertNumber(n){
+  let res = '';
+  do{
+  res += n % 10;
+  n = Math.floor(n / 10);
+  }while(n >= 1);
+  return +res;
+  }
