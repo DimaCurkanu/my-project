@@ -733,3 +733,13 @@ function frogPrincess(n){
   return d
   }
 console.log(frogPrincess(40));
+/////////////////// 10 дней бега, каждий день +10%. на 10 день - сколько?
+function running(n){
+  let d = 2;
+  do {
+   n = n + (n/10)
+   d++
+  } while (d <=10);
+  return Math.round(n);
+  }
+console.log(running(10));
