@@ -811,3 +811,17 @@ function invertNumber(n){
     return arr;
   }
   console.log(arrayOfDigits(123456));
+  ////////////--------------------------///////////////
+  // есть лі ціфра 2 в чісле ?////////
+  function doesNumberContain2(n){
+    let a = 0;
+    do {
+      a = n%10;
+      n = Math.floor(n/10);
+      if ( a == 2) return true
+      console.log(n);
+      console.log(a);
+    } while (n > 1);
+    return false;
+  }
+  console.log(doesNumberContain2(12113));
