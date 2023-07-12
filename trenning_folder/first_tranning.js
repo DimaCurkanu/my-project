@@ -838,3 +838,15 @@ function invertNumber(n){
     return false;
   }
   console.log(doesNumberContain2(12113));
+//////////////////////// test ////////////
+it('AT_17.01.002 | Add description to the Organization Folder via Configure the project', () => {
+  cy.createOrgFolderProject(newItemPageData.orgFolderName)
+
+  homePage
+      .clickOrgFolderNameLink(newItemPageData.orgFolderName)
+      .clickConfigureTheProjectLink()
+      .addDescription(OrgFolderConfigurePageData.description)
+      .clickSaveBtnAndGoOrgFolder()
+      .getDescription()
+      .should('contain.text', OrgFolderConfigurePageData.description);
+});
