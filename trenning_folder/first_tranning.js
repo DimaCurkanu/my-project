@@ -850,3 +850,10 @@ it('AT_17.01.002 | Add description to the Organization Folder via Configure the 
       .getDescription()
       .should('contain.text', OrgFolderConfigurePageData.description);
 });
+//////////// таблица умножения //////////
+for (let i = 1; i <= 10; i++) {
+  for (let j = 1; j<=10; j++) {
+    console.log(`${i} * ${j} = ${i * j}`);
+  }
+console.log('----------------');
+}
