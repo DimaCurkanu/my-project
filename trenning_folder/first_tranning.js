@@ -857,3 +857,76 @@ for (let i = 1; i <= 10; i++) {
   }
 console.log('----------------');
 }
+///////////////////// ATM //////////??????????????????????
+// An ATM has banknotes of nominal values 10, 20, 50, 100, 200 and 500 dollars. 
+// You can consider that there is a large enough supply of each of these banknotes.
+
+// You have to write the ATM's function that determines the minimal number of banknotes 
+// needed to honor a withdrawal of n dollars, with 1 <= n <= 1500.
+
+// Return that number, or -1 if it is impossible.
+
+
+function solve(n) {
+  let a = 0;
+  if (n%500 >= 0) {
+    a = a + Math.floor(n/500)
+    n = n%500;
+  };
+  if (n%200 >= 0) {
+    a = a + Math.floor(n/200)
+    n = n%200;
+  };
+  if (n%100 >= 0) {
+    a = a + Math.floor(n/100)
+    n = n%100;
+  };
+  if (n%50 >= 0) {
+    a = a + Math.floor(n/50)
+    n = n%50;
+  };
+  if (n%20 >= 0) {
+    a = a + Math.floor(n/20)
+    n = n%20;
+  };
+  if (n%10 >= 0) {
+    a = a + Math.floor(n/10)
+    n = n%10;
+  };
+  if (n != 0) {
+    a = -1
+  };
+return a
+}
+console.log(solve(80));
+////////////////////// more //////
+function solve(n) {
+  let counter = 0;
+  [500, 200, 100, 50, 20, 10].forEach(item => {
+    counter += Math.floor(n / item)
+    n = n % item
+  })
+  return n ? -1 : counter
+}
+/// +++++++++++++++++//////////
+function solve(n) {
+  if (n % 10) return -1
+  return [500, 200, 100, 50, 20, 10].reduce((s, v) => {
+    let ans = n / v | 0
+    n %= v
+    return s + ans
+  }, 0)
+}
+//////////// +++++++++++++++++//////////////
+function solve(n) {
+  if (n%10!=0)
+    return -1;
+  var count=0;
+  while (n>=500){n-=500;count++;}
+  while (n>=200){n-=200;count++;}
+  while (n>=100){n-=100;count++;}
+  while (n>=50){n-=50;count++;}
+  while (n>=20){n-=20;count++;}
+  while (n>=10){n-=10;count++;}
+  return count;
+}
