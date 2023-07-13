@@ -930,3 +930,27 @@ function solve(n) {
   while (n>=10){n-=10;count++;}
   return count;
 }
+////////////////
+// “A farm contains chickens and cows. There are x heads and y legs. 
+// How many chickens and cows are there?” 
+
+// Where x <= 1000 and y <=1000
+function animals(heads, legs){
+  if (legs < 0) return "No solutions";
+  let x = (4 * heads - legs) / 2;
+  let y = heads - x;
+  if ( legs%2 != 0 || x < 0) return "No solutions";
+  return [x, y]
+}
+console.log(animals(1000, -500));
+
+///////////////////// good solution :
+function animals(heads, legs){
+  const chickens = (4 * heads - legs) / 2;
+  const cows = heads - chickens;
+  
+  if (chickens >= 0 && chickens % 1 === 0 && cows >= 0) {
+      return [chickens, cows];
+  }
+  return 'No solutions';
+}
