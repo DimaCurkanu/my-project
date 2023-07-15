@@ -954,3 +954,38 @@ function animals(heads, legs){
   }
   return 'No solutions';
 }
+////// таблица от 1 до n по 5 цифр в ряду
+function numericalTable(n){
+  for (let i = 1; i <= n; i++) {
+    var str = '';
+    for (let j = 0; j < 5; j++) {
+       
+      if (j == 4) str = str + i;
+      else {str = str + i + ' '};
+    }
+    console.log(str);
+  }
+}
+(numericalTable(20)); // console.log(str); //
+
+for (let i = 1; i <= 20; i++) {
+  var str = '';
+  for (let j = 1; j <= 5; j++) {
+    if (i < 10) str = str + i + '   ';
+    else str = str + i + ' ';
+  }
+  console.log(str);
+}
+
+function numericalTable(n){
+  for (let i = 1; i <= n; i++) {
+    var str = '';
+    for (let j = 0; j < 5; j++) {
+       
+      if (j == 4) str = str + i;
+      else {str = str + i + ' '};
+    }
+    console.log(str);
+  }
+}
+(numericalTable(20));
