@@ -1080,3 +1080,12 @@ function starTriangle(n){
   return str;
   }
 console.log(starTriangle(5));
+/////+++++++++++++++ more solution: __________
+function starTriangle(n){
+  let res='';
+  for ( let i=1; i<=n; i++){ 
+    for ( let j=1; j<=i; j++) { 
+      res = res +'*';} 
+      if (i!==n) res=res+'\n';} 
+      return res
+  }
