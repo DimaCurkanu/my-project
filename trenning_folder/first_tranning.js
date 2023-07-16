@@ -1035,3 +1035,48 @@ for(let i = 1; i <= n; i++){
 return str;
 }
 console.log((numericalTable(20, 5)));
+///////////// еще хорошее і простое решеніе /---------
+function numericalTable(n, m){
+  let str = '';
+  for(i = 1; i <= n; i++){
+  for(j = 1; j <= m; j++){
+  if(j === m && i === n){
+  str += i;
+  }else if(j === m && i < n){
+  str += i + '\n';
+  }else {str += i + ' ';}
+  }
+  }
+  return str;
+  }
+  //////////// треугольнік із чісел от 1 до n
+//////// +++++++++++++++++++++++++++++++!!!!!!!!!!!!!!!!!!!!!!!
+  function numericalTriangle(n){
+    let str = '';
+    for(i = 1; i <= n; i++){
+    for(j = 1; j <= i; j++){
+    if(j === i && i === n){
+    str += i;
+    }else if(j === i && i < n){
+    str += i + '\n';
+    }else {str += i + ' ';}
+    }
+    }
+    return str;
+    }
+console.log(numericalTriangle(5));
+
+///////// треугольнік із ****** ???? ///////////
+
+function starTriangle(n){
+  let str = '';
+  for(i = 1; i <= n; i++){
+  for(j = 1; j <= i; j++){
+   if(j === i && i < n){
+  str += "*" + '\n';
+  }else {str += "*";}
+  }
+  }
+  return str;
+  }
+console.log(starTriangle(5));
