@@ -1004,3 +1004,34 @@ function numericalTable(n){
   return str
 }
 console.log((numericalTable(20)));
+////////////////////////////////// табліца із m чісел в ряду///////
+function numericalTable(n, m){
+  let str = ''
+  let chank = ''
+  for(let i = 1; i <= n; i++){
+      if(i !== 1) str += '\n'
+      chank = ''
+      for(let j = 0; j < m; j++){
+          chank += String(i) + ' '
+      }
+      str += chank.trim()
+  }
+  return str
+}
+console.log((numericalTable(20, 5)));
+///////////////////////// єто решегніе почему-то не прошло, хотя тоже видает табліцу ???///
+function numericalTable(n, m){
+let str = '';  
+for(let i = 1; i <= n; i++){
+   for(let j = 0; j < m; j++){
+     str+=`${i}`+ ' ';
+   } 
+    if(i !== n){
+     str+=`${i}\n`
+    }else{
+     str+=`${i}`
+    }
+}
+return str;
+}
+console.log((numericalTable(20, 5)));
