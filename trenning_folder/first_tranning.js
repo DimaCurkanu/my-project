@@ -1089,3 +1089,34 @@ function starTriangle(n){
       if (i!==n) res=res+'\n';} 
       return res
   }
+  ///////////// ф-ція прінімает двумерний массів і возвращает массів із сумм каждого вложенного массіва
+  function sumsInArray(arr){
+let b = [];
+var sum = 0
+for (i = 0; i < arr.length; i++){
+  let s = arr[i];
+  b.push(s);
+  //b = b.reduce((a, b) => a + b, 0);;
+  //console.log(s);
+  for (j=0; j < b.length; j++){
+  sum += b[i];
+  console.log(b[i]);
+  }
+  //console.log(sum);
+}
+return b
+  }
+  console.log(sumsInArray([1, 2, 3], [2, 2]));
+////--===================================>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+function sumsInArray(arr){
+  let b = [];
+  for (i = 0; i < arr.length; i++){
+    let sum = 0;
+    for (j=0; j < arr[i].length; j++){
+    sum += arr[i][j];
+    }
+   b.push(sum);
+  }
+  return b
+    }
+    console.log(sumsInArray([[1, 2, 3], [2, 2]]));
