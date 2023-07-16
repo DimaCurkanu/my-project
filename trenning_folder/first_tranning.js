@@ -989,3 +989,18 @@ function numericalTable(n){
   }
 }
 (numericalTable(20));
+////////////////////////// вреное решение !!!!!!!!!!!!! /////////////
+function numericalTable(n){
+  let str = ''
+  let chank = ''
+  for(let i = 1; i <= n; i++){
+      if(i !== 1) str += '\n'
+      chank = ''
+      for(let j = 0; j < 5; j++){
+          chank += String(i) + ' '
+      }
+      str += chank.trim()
+  }
+  return str
+}
+console.log((numericalTable(20)));
