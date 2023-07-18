@@ -1133,4 +1133,27 @@ str += "*" + '\n';
 return str; ///////////// работает
 }
 console.log(upsideDown(6));
-
+//////////////////////////// ищем вариант без переходва после последней строки
+function upsideDown(n){
+  let str = '';
+for(i = n; i >= 0; i--){
+for(let j = 1; j <= i; j++){
+ if(j === i && i <= n ){
+str += "*" + '\n';
+} else {str += "*";}
+}
+}
+return str; ///////////// работает  && i <= n
+}
+console.log(upsideDown(5));
+//////////////////////////////// верное решение от ЧАТ ЖПТ ::::::::::: !!!!!!!!!!!!
+function upsideDown(n) {
+  let triangle = '';
+  for (let i = n; i > 1; i--) {
+    const row = '*'.repeat(i);
+    triangle += row + '\n';
+  }
+  triangle += '*';
+  return triangle;
+}
+console.log(upsideDown(5));
