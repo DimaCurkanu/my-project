@@ -1120,3 +1120,17 @@ function sumsInArray(arr){
   return b
     }
     console.log(sumsInArray([[1, 2, 3], [2, 2]]));
+//////////////// перевернутый треугольник=====>>>>>>>>>>>>>>>>>>>
+function upsideDown(n){
+  let str = '';
+for(i = n; i >= 0; i--){
+for(let j = 1; j <= i; j++){
+ if(j === i && i <= n){
+str += "*" + '\n';
+ } else {str += "*";}
+ }
+}
+return str; ///////////// работает
+}
+console.log(upsideDown(6));
+
