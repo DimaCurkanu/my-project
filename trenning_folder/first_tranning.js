@@ -1096,8 +1096,7 @@ var sum = 0
 for (i = 0; i < arr.length; i++){
   let s = arr[i];
   b.push(s);
-  //b = b.reduce((a, b) => a + b, 0);;
-  //console.log(s);
+  
   for (j=0; j < b.length; j++){
   sum += b[i];
   console.log(b[i]);
@@ -1106,7 +1105,7 @@ for (i = 0; i < arr.length; i++){
 }
 return b
   }
-  console.log(sumsInArray([1, 2, 3], [2, 2]));
+  console.log(sumsInArray([[1, 2, 3], [2, 2]]));
 ////--===================================>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 function sumsInArray(arr){
   let b = [];
@@ -1175,3 +1174,48 @@ function upsideDown(n){
  return str;
  
  }
+ //////////////////// Вложенный массив => вернуть количество строк, имеющих хоть один отрицательный элемент
+ function countLinesWithNegativeElements(arr){
+  let b = [];
+  for (i = 0; i < arr.length; i++){
+    var k = 0;
+    for (j=0; j < arr[i].length; j++){
+      if (arr[i][j] < 0) {k+=1}//{b.push(arr[i][j])};
+      console.log(arr[i]);
+      //b.push(k)
+      }
+  }
+  return k
+  // return b//.length
+    }
+  //}
+    console.log(countLinesWithNegativeElements([[1, -2, 3], [2, -2]]));
+
+    function countLinesWithNegativeElements(arr){
+      let sum = 0;
+  for (i = 0; i < arr.length; i++){
+    for (j=0; j < arr[i].length; j++){
+      if (arr[i][j] < 0) {
+    sum +=1;
+    break 
+      }; 
+    }
+  }
+  return sum 
+    }
+    console.log(countLinesWithNegativeElements([[1, 2, 3], [2, 2], [2, -3, -3], [1, 2, 3], [2, 2]]));
+
+    function countLinesWithNegativeElements(arr) {
+      let count = 0;
+      for (let i = 0; i < arr.length; i++) {
+        const line = arr[i];
+        for (let j = 0; j < line.length; j++) {
+          if (line[j] < 0) {
+            count++;
+            break;
+          }
+        }
+      }
+      return count;
+    }
+    console.log(countLinesWithNegativeElements([[1, 2, 3], [2, 2], [2, -3, -3], [1, 2, 3], [2, 2]]));
