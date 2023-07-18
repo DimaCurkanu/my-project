@@ -1157,3 +1157,21 @@ function upsideDown(n) {
   return triangle;
 }
 console.log(upsideDown(5));
+
+//////////////// простое хорошее решение: ----->>>>
+function upsideDown(n){
+
+  let str = '';
+  for(let i = n; i >= 1; i--){
+   for(let j = 1; j < i; j++){
+     str+=`*`;
+       }
+     if(i !== 1){
+       str+=`*\n`;   
+     }else{
+       str+=`*`; 
+     }
+  }
+ return str;
+ 
+ }
