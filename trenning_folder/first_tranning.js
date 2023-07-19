@@ -1219,3 +1219,34 @@ function upsideDown(n){
       return count;
     }
     console.log(countLinesWithNegativeElements([[1, 2, 3], [2, 2], [2, -3, -3], [1, 2, 3], [2, 2]]));
+
+    //////////// to build diamond -->>>>>>>>>>>>
+    let height = 5;
+let halfTree = height - 1;
+for (let i = 0; i < height; i++) {
+    let line = ""
+
+    /// loop for " " (пробелы)
+    // i - это номер строки
+    for (let j = 0; j < halfTree - i; j++){
+        line = line + " " 
+    }
+    // loop for '*'
+    for ( let j = 0; j < 2*i + 1; j++){
+        line += "*"
+    }
+    console.log(line);
+}
+/////// ----- отсюда начинается ромб---- ////
+for (let i = height - 2; i>= 0; i--){
+    let line = ""
+/// loop for " "
+    for (let j = 0; j < halfTree - i; j++) {
+     line += " "
+    }
+    // loop for '*'
+    for ( let j = 0; j < 2*i + 1; j++){
+        line += "*"
+    }
+    console.log(line);
+}
