@@ -1250,3 +1250,16 @@ for (let i = height - 2; i>= 0; i--){
     }
     console.log(line);
 }
+//////////////////Your task is to return a number from a string.
+
+var filterString = function(value) {
+  let b = value.split('');
+  let a = '';
+  for (i = 0; i <= b.length; i++) {
+    if (!isNaN(b[i])){
+      a += b[i];
+    }
+  }
+  return +a; 
+}
+console.log(filterString("aa1bb2cc3dd"));
