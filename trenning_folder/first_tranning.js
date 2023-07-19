@@ -1267,3 +1267,12 @@ console.log(filterString("aa1bb2cc3dd"));
 var FilterString = function(value) {
   return +value.split('').filter(n => !isNaN(n)).join('');
 }
+
+//Write a function isReallyNaN that returns true only if passed in an argument that evalutes to NaN,
+/// and returns false otherwise.
+const isReallyNaN = (val) => {
+  // return isNaN(val);  // wasn't working as planned :-(
+   return Number.isNaN(val)
+
+  //return true || false;
+};
