@@ -1263,3 +1263,7 @@ var filterString = function(value) {
   return +a; 
 }
 console.log(filterString("aa1bb2cc3dd"));
+////////////////////////////////// +++++++++++= solution -->>
+var FilterString = function(value) {
+  return +value.split('').filter(n => !isNaN(n)).join('');
+}
