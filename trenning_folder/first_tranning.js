@@ -1276,3 +1276,14 @@ const isReallyNaN = (val) => {
 
   //return true || false;
 };
+/////
+//Write a function which will return value for which strict comparison will give false!
+
+function findStrangeValue() {
+  var x = Number.NaN
+  return x
+ }
+//////// or ;
+function findStrangeValue() {
+  return + 'fart'
+}
