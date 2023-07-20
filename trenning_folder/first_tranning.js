@@ -1287,3 +1287,7 @@ function findStrangeValue() {
 function findStrangeValue() {
   return + 'fart'
 }
+/////////// 
+function multBy5(value){
+  return Number.isNaN(value) ? "Value is NaN" : value * 5;
+  }
