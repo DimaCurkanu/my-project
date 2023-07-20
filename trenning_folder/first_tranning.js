@@ -1291,3 +1291,11 @@ function findStrangeValue() {
 function multBy5(value){
   return Number.isNaN(value) ? "Value is NaN" : value * 5;
   }
+//////// сколько NaN в массиве? ___________------>>>>
+  function countNaN(arr){
+    let k = 0;
+    for (i =0; i <= arr.length; i++) {
+    if (Number.isNaN(arr[i])) k +=1;
+    }
+    return k
+    }
