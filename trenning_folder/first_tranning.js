@@ -1299,3 +1299,16 @@ function multBy5(value){
     }
     return k
     }
+
+    ////////////// скільки безкінечних значень в масиві? --->>
+    function countInfinity(arr){
+      let k = 0;
+      for (i = 0; i <= arr.length -1; i++) {
+        if (isFinite(arr[i]) == false) {
+          k++
+        }
+      }
+      return k
+    }
+
+    console.log(countInfinity([Infinity, -Infinity, 3/0, -4/0, 'a' * 2, NaN]));
