@@ -1312,3 +1312,14 @@ function multBy5(value){
     }
 
     console.log(countInfinity([Infinity, -Infinity, 3/0, -4/0, 'a' * 2, NaN]));
+////////// інверсія всіх елементів масиву-------->>>
+function invert(array) {
+  let arr = [];
+  for (i=0; i < array.length; i++) {
+   array[i] = array[i] * -1;
+    arr.push(array[i])
+    //console.log(array[i]);
+  }
+   return arr;
+}
+console.log(invert([1, 2, 3, 4]));
