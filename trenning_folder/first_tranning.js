@@ -1323,3 +1323,7 @@ function invert(array) {
    return arr;
 }
 console.log(invert([1, 2, 3, 4]));
+///////////// самое короткое решение -- >>
+function oppositeArray(arr){
+  return arr.map(num => -num)
+  }
