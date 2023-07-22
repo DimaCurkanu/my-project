@@ -1341,3 +1341,5 @@ function multiply(number){
 return number * (5 ** a)
 }
 console.log(multiply(10));
+////// simpe solution : --->>>
+const multiply = num => num * 5 ** (Math.abs(num).toString()).length
