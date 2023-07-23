@@ -1417,3 +1417,11 @@ function powerArray(arr){
   return a
   }
 console.log(powerArray([1, 2, 3, 4, 5]));
+//////// получить массив степеней 2 до n
+function powersOfTwo(n){
+  let a  = [];
+  for (i=0; i <= n; i++) {
+  a.push(2 ** i)
+  }
+  return a
+  }
