@@ -1409,3 +1409,11 @@ console.log(calc_ms(0));
 function calc_ms(n) {
   return 20 ** n;
 }
+//// каждый четный эл. возвести в квадрат, а нечетный - в куб
+function powerArray(arr){
+  let a = arr.map((num) => 
+   num%2 == 0 ? num ** 2 : num **3
+  )
+  return a
+  }
+console.log(powerArray([1, 2, 3, 4, 5]));
