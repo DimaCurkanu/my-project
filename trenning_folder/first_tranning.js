@@ -1387,3 +1387,10 @@ function squareOrSquareRoot(array) {
   return a;  
 }
 console.log(squareOrSquareRoot([ 4, 3, 9, 7, 2, 1 ]));
+//////
+function squareOrSquareRoot(array) {
+  return array.map(x => {
+    const n = Math.sqrt(x)
+    return Number.isInteger(n) ? n : x * x
+  })
+}
