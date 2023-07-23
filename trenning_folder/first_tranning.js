@@ -1396,3 +1396,16 @@ function squareOrSquareRoot(array) {
 }
 ///// в одну строку!!! -->>
 const squareOrSquareRoot = $ => $.map(el => el**.5 % 1 ? el*el : el**.5)
+///////////////-->> The Menger Sponge is a three-dimensional fractal
+//In this kata you will create a function that takes non negative integers 
+//(from 0 to n) and return the amount of cubes that the Menger Sponge would have 
+//in that specific iteration.
+function calc_ms(n) {
+  let a = 1
+  return (2**n) * (10**n)
+}
+console.log(calc_ms(0));
+/// ответ с сайта: 
+function calc_ms(n) {
+  return 20 ** n;
+}
