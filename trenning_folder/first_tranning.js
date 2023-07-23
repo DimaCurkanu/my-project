@@ -1394,3 +1394,5 @@ function squareOrSquareRoot(array) {
     return Number.isInteger(n) ? n : x * x
   })
 }
+///// в одну строку!!! -->>
+const squareOrSquareRoot = $ => $.map(el => el**.5 % 1 ? el*el : el**.5)
