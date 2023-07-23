@@ -1342,4 +1342,19 @@ return number * (5 ** a)
 }
 console.log(multiply(10));
 ////// simpe solution : --->>>
-const multiply = num => num * 5 ** (Math.abs(num).toString()).length
+
+// Complete the function that returns an array of length n, 
+// starting with the given number x and the squares of the previous number. 
+// If n is negative or zero, return an empty array/list.
+function squares(x, n) {
+let arr = [x];
+if (n <= 0) {
+   return [];
+}
+for (i = 1; i < n; i++) {
+  x = Math.pow(x, 2);
+  arr.push(x) 
+} 
+return arr 
+}
+console.log(squares(10, -4));
