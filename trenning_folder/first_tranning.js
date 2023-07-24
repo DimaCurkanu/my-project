@@ -1455,3 +1455,9 @@ function findNextSquare(sq) {
   let r = Math.sqrt(sq)
   return r % 1 ? -1 : ++r * r
 }
+
+/////////////////////////
+  function cutCube(volume,n){
+    return Math.cbrt(volume/n) % 1 == 0 && Math.cbrt(n) % 1 == 0; 
+    }
+      console.log(cutCube(512,8));
