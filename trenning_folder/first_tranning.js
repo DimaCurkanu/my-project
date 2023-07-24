@@ -1461,3 +1461,8 @@ function findNextSquare(sq) {
     return Math.cbrt(volume/n) % 1 == 0 && Math.cbrt(n) % 1 == 0; 
     }
       console.log(cutCube(512,8));
+//////////////////////////////
+      function isSquare(x){
+        return Number.isInteger(Math.sqrt(x)) ? `${x} is square of ${Math.sqrt(x)}` : `${x} is not a square`;
+        }
+        console.log();
