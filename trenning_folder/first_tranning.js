@@ -1466,3 +1466,16 @@ function findNextSquare(sq) {
         return Number.isInteger(Math.sqrt(x)) ? `${x} is square of ${Math.sqrt(x)}` : `${x} is not a square`;
         }
         console.log();
+
+        function expression(a, b, c){
+          return +(Math.sqrt(a) + (Math.sqrt(Math.abs(b - c)) / ((Math.pow(a, 3) + Math.pow(b, 2) + (Math.pow(c, 4)))))).toFixed(2)
+          }
+/////////////// корни кваддратного уравнения
+function quadraticEquation(a, b, c){
+let d = (b **2) - (4 * a * c);
+if (d < 0) return "There are no roots";
+let x = (-b + Math.sqrt(d))/ (2 * a);
+let y = (-b - Math.sqrt(d))/ (2 * a);
+return [x, y]
+}
+console.log(quadraticEquation(2, 3, 0));
