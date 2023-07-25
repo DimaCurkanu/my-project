@@ -1479,3 +1479,12 @@ let y = (-b - Math.sqrt(d))/ (2 * a);
 return [x, y]
 }
 console.log(quadraticEquation(2, 3, 0));
+/////////////////Сложить два логарифма с основанием X со значениями A и B. 
+// Пример log A + log B, где основание равно X.
+const logs = (x , a, b) => (Math.log(a) + Math.log(b)) / Math.log(x);
+// 2
+const logs = (x,a,b) => Math.log(a*b)/Math.log(x)
+// 3
+function logs(x , a, b){
+  return (Math.log(a*b) / Math.log(x));
+  }
