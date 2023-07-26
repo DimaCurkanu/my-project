@@ -1488,3 +1488,25 @@ const logs = (x,a,b) => Math.log(a*b)/Math.log(x)
 function logs(x , a, b){
   return (Math.log(a*b) / Math.log(x));
   }
+
+  function countPowersInArray(arr){
+    let k = 0;
+    for (i =0; i < arr.length; i++) {
+      
+    if (Math.log2(arr[i])%1 == 0 || Math.log10(arr[i])%1 == 0) k++;
+    console.log(Math.log2(arr[i], Math.log10(arr[i])));
+    }
+    return k
+    }
+    console.log(countPowersInArray([10, 100, 1000, 2, 5]));
+
+    //There's a "3 for 2" (or "2+1" if you like) offer on mangoes. 
+    //For a given quantity and price (per mango), calculate the total cost of the mangoes.
+    function mango(quantity, price){
+      return Math.ceil(quantity/3) * 2 * price
+      }
+      console.log(mango(9, 5));/// это решение работает не всегда
+      /// а это решение работате всегда
+      function mango(quantity, price){
+        return price * (quantity - Math.floor(quantity / 3));
+      }
