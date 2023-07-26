@@ -1510,3 +1510,10 @@ function logs(x , a, b){
       function mango(quantity, price){
         return price * (quantity - Math.floor(quantity / 3));
       }
+//Another example: if a bottle costs £12 normally and the duty free discount is 50%, 
+//you would save £6 per bottle. If your holiday will cost £1000, you would have 
+//to purchase 166.66 bottles to save £1000, so your answer should be 166 bottles.
+function dutyFree(normPrice, discount, hol){
+  return Math.floor(hol / (normPrice * (discount / 100)))
+  }
+        console.log(dutyFree(17, 10, 500));
