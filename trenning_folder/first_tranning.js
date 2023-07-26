@@ -1517,3 +1517,14 @@ function dutyFree(normPrice, discount, hol){
   return Math.floor(hol / (normPrice * (discount / 100)))
   }
         console.log(dutyFree(17, 10, 500));
+
+  ////
+// Create a function that takes an integer argument of seconds and converts the value 
+//into a string describing how many hours and minutes comprise that many seconds.
+  function toTime(seconds) {
+    let h = Math.floor(seconds / 3600);
+      let m = Math.floor(((seconds / 3600) - Math.floor(seconds / 3600))*60);
+      console.log(((seconds / 3600)*60).toFixed(0));
+    return `${h} hour(s) and ${m} minute(s)`
+    }
+    console.log(toTime(323500));
