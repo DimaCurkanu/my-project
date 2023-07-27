@@ -1535,3 +1535,8 @@ function danspower(num, power) {
   if (num**power %2 == 0) return num ** power;
 return Math.round((num ** power) / 10) * 10
 }
+/////////
+// все элементы в масссиве округлить
+function roundElementsOfArray(arr){
+  return arr.map(el => Math.round(el));
+  }
