@@ -1528,3 +1528,10 @@ function dutyFree(normPrice, discount, hol){
     return `${h} hour(s) and ${m} minute(s)`
     }
     console.log(toTime(323500));
+
+/////Return the nth power of each number, unless the result is odd, 
+//in which case round the result to the nearest 10.
+function danspower(num, power) {
+  if (num**power %2 == 0) return num ** power;
+return Math.round((num ** power) / 10) * 10
+}
