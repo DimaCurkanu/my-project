@@ -1540,3 +1540,40 @@ return Math.round((num ** power) / 10) * 10
 function roundElementsOfArray(arr){
   return arr.map(el => Math.round(el));
   }
+/////////
+// Two tortoises named A and B must run a race. 
+// A starts with an average speed of 720 feet per hour. 
+// Young B knows she runs faster than A, and furthermore has not finished her cabbage.
+
+// When she starts, at last, she can see that A has a 70 feet lead but B's speed is 
+// 850 feet per hour. How long will it take B to catch A?
+
+//////=================================== 
+function race(v1, v2, g) {
+  // If v1 is greater than or equal to v2, B can never catch A, so return null.
+  if (v1 >= v2) {
+    return null;
+  }
+
+  // Calculate the relative speed (how much faster B is compared to A).
+  const relativeSpeed = v2 - v1;
+
+  // Calculate the time (in hours) required for B to catch A.
+  const timeInHours = g / relativeSpeed;
+
+  // Convert the time in hours to hours, minutes, and seconds.
+  const hours = Math.floor(timeInHours);
+  const remainingMinutes = (timeInHours - hours) * 60;
+  const minutes = Math.floor(remainingMinutes);
+  const remindSeconds = (remainingMinutes - minutes) * 60;
+  const seconds = Math.trunc(remindSeconds);
+
+  // If seconds is 60 or more, adjust minutes and seconds.
+  if ((remindSeconds/10) - (remindSeconds/10).toFixed(1) >= 0.5) seconds = Math.round(remindSeconds)
+  if (seconds >= 59) {
+    return [hours, minutes + 1, 0];
+  }
+
+  return [hours, minutes, seconds];
+}
+console.log(race(720, 850, 37));
