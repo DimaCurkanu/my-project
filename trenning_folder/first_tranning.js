@@ -1633,3 +1633,20 @@ function sumOfMinimums(arr) {
   return s
 }
 console.log(sumOfMinimums([[7, 9, 8, 6, 2], [6, 3, 5, 4, 3], [5, 8, 7, 4, 5]]));
+/////////===============================================//////////////////////
+// Given two integers a and x, return the minimum non-negative number to add to / subtract 
+// from a to make it a multiple of x.
+
+// minimum(10, 6)  //= 2
+
+// 10+2 = 12 which is a multiple of 6
+
+function minimum(a, x) {
+  let arr =[];
+  for (i = a; i >= 0; i--) {
+   if((a + i) % x == 0 || (a - i) % x == 0) arr.push(i)
+  }
+  console.log(arr);
+  return Math.min(...arr)
+}
+console.log(minimum(33, 8));
