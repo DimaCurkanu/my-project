@@ -1622,3 +1622,14 @@ function coinCombo(cents) {
 function minMax(arr){
   return [Math.min(...arr), Math.max(...arr)];
 }
+
+///////Given a 2D ( nested ) list ( array, vector, .. ) 
+//of size m * n, your task is to find the sum of the minimum values in each row.
+function sumOfMinimums(arr) {
+  let s = 0;
+  for (i=0; i < arr.length; i++) {
+    s = s + Math.min(...arr[i]);
+  }
+  return s
+}
+console.log(sumOfMinimums([[7, 9, 8, 6, 2], [6, 3, 5, 4, 3], [5, 8, 7, 4, 5]]));
