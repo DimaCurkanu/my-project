@@ -1650,3 +1650,11 @@ function minimum(a, x) {
   return Math.min(...arr)
 }
 console.log(minimum(33, 8));
+
+///////////// ВЫвести минимальное положителное число из массива. Если нет положительных чисел => null
+
+  function minPositive(arr){
+    let a = arr.filter((el) => el > 0);
+    return a.length > 0?  Math.min(...a) : null
+    }
+    console.log(minPositive([-6, -7, -8 ,-1 , -4]));
