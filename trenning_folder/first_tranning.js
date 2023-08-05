@@ -1764,3 +1764,20 @@ let a = arr.filter((el) => el < 0)
 return a.length? Math.max(...a): null;
 }
 console.log(maxNegative([3, 4, -58, -21, 4]));
+/////++++++++++++++++++++++++++++++++++++++++++++++++++
+function yourFutureCareer() {
+	var career = Math.random();
+  
+	if (career <= 0.32) {
+    return 'FrontEnd Developer';
+  } else if (career <= 0.65) {
+    return 'BackEnd Developer';
+  } else {
+    return 'Full-Stack Developer';
+  }
+}
+  //
+  const yourFutureCareer = () => {
+    let career = Math.random();
+    return `${ career <= 0.32 ? 'FrontEnd' : (career <= 0.65 ? 'BackEnd' : 'Full-Stack') } Developer`;
+  }
