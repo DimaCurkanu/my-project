@@ -1710,3 +1710,16 @@ for (i = Math.min(...numbers); i <= Math.max(...numbers); i++) {
 return a.sort((c, b) => c - b)
 }
  console.log(pipeFix([ 1, 10, 11, 12, 2, 3, 4, 5, 6, 7, 8, 9 ]));
+ // то же самое, но проще
+ function pipeFix(numbers){
+  var min = numbers[0];
+  var max = numbers[numbers.length - 1];
+  var array = [];
+  
+  for(var i = min; i<=max; i++)
+  {
+    array.push(i);
+  }
+  
+  return array;
+}
