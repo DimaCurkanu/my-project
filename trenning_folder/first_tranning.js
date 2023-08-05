@@ -1693,3 +1693,20 @@ function consecutive(arr) {
     let l = arr.length;
     return l ? Math.max(...arr) - Math.min(...arr) - l + 1 : 0;
   }
+ ////Task
+// Given the a list of unique numbers sorted in ascending order, 
+// return a new list so that the values increment by 1 for each index from 
+// the minimum value up to the maximum value (both included).
+
+// Example
+// Input:  1,3,5,6,7,8 Output: 1,2,3,4,5,6,7,8
+function pipeFix(numbers){
+  let a = numbers.sort((c, b) => c - b);
+for (i = Math.min(...numbers); i <= Math.max(...numbers); i++) {
+   if( !numbers.includes(i)) {
+    a.push(i);
+   }
+} 
+return a.sort((c, b) => c - b)
+}
+ console.log(pipeFix([ 1, 10, 11, 12, 2, 3, 4, 5, 6, 7, 8, 9 ]));
