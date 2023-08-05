@@ -1658,3 +1658,32 @@ console.log(minimum(33, 8));
     return a.length > 0?  Math.min(...a) : null
     }
     console.log(minPositive([-6, -7, -8 ,-1 , -4]));
+
+    //Create the function consecutive(arr) that takes an array of integers and return 
+//     the minimum number of integers needed to make the contents of arr consecutive from 
+//     the lowest number to the highest number.
+
+// For example:
+// If arr contains [4, 8, 6] then the output should be 2 because two numbers need to be 
+// added to the array (5 and 7) to make it a consecutive array of numbers from 4 to 8. 
+// Numbers in arr will be unique.
+function consecutive(arr) {
+  if (!arr || arr.length === 0 || arr.length === 1) {
+    return 0;
+  }
+
+  arr.sort((a, b) => a - b);
+  const minNum = arr[0];
+  const maxNum = arr[arr.length - 1];
+
+  let consecutiveCount = 0;
+  for (let num = minNum; num < maxNum; num++) {
+    if (!arr.includes(num)) {
+      consecutiveCount++;
+    }
+  }
+
+  return consecutiveCount;
+}
+
+  console.log(consecutive([4,8,6]));
