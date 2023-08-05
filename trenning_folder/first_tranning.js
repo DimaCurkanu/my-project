@@ -1758,3 +1758,9 @@ console.log((expressionMatter(6, 7, 1)));
 function expressionMatter(a, b, c) {
   return Math.max(a+b+c, a*b*c, (a+b)*c, a*(b+c));
 }
+///\
+function maxNegative(arr){
+let a = arr.filter((el) => el < 0)
+return a.length? Math.max(...a): null;
+}
+console.log(maxNegative([3, 4, -58, -21, 4]));
