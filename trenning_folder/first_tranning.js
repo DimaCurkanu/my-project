@@ -1811,3 +1811,5 @@ console.log(createPhoneNumber());
 function evensAndOdds(num){
   return num % 2 == 0 ? num.toString(2) : num.toString(16)
   }
+  // короче запись:
+  const evensAndOdds = n => n.toString(n%2 ? 16 : 2);
