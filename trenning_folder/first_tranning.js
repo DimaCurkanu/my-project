@@ -1781,3 +1781,9 @@ function yourFutureCareer() {
     let career = Math.random();
     return `${ career <= 0.32 ? 'FrontEnd' : (career <= 0.65 ? 'BackEnd' : 'Full-Stack') } Developer`;
   }
+  //написать функцию, которая принимает в качестве аргумента положительное 
+  //число n и возвращает случайное целое число от 0 до n
+  function randomIntegerToN(n) {
+    // Генерируем случайное число от 0 до n (включительно)
+    return Math.floor(Math.random() * (n + 1));
+  }
