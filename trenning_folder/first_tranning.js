@@ -1813,3 +1813,8 @@ function evensAndOdds(num){
   }
   // короче запись:
   const evensAndOdds = n => n.toString(n%2 ? 16 : 2);
+
+  // вернуть число в ичислении по основанию n
+  function convertNumber(num, n){
+    return n>1 && n<37 ? num.toString(n): undefined 
+    }
