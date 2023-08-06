@@ -1787,3 +1787,11 @@ function yourFutureCareer() {
     // Генерируем случайное число от 0 до n (включительно)
     return Math.floor(Math.random() * (n + 1));
   }
+
+  //написать функцию, которая принимает в качестве аргумента два положительных числа 
+  //min и max и возвращает случайное целое число от min до max
+  function randomIntegerInRange(min, max) {
+    // Генерируем случайное число от min до max (включительно)
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
+  
