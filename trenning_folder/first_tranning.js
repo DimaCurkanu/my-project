@@ -1794,4 +1794,12 @@ function yourFutureCareer() {
     // Генерируем случайное число от min до max (включительно)
     return Math.floor(Math.random() * (max - min + 1)) + min;
   }
-  
+  // создать случайный номер телефона из 11 цифр
+  function createPhoneNumber(){
+     let tel = '+1';
+     for (i = 0; i<10; i++) {
+      tel = tel + Math.floor(Math.random() *10);
+     }
+     return tel;
+  }
+console.log(createPhoneNumber());
