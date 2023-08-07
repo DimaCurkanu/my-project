@@ -1849,3 +1849,22 @@ console.log(ringSquare(5, 4));
 function formatArray(arr){
   return arr.map((x,idx) => +(x).toFixed(idx));
   }
+  
+  //сколько жидкости выпила Клавдия?
+  
+  function hydrate(arr){
+    let a = 0;
+    for (i = 0; i < arr.length; i++) {
+    a = (a + parseInt(arr[i], 10)) 
+    //console.log(parseInt(arr[i]));
+    }
+    return `${a * 200} ml`
+    }
+    console.log(hydrate(['1 glass of lemonade', '1 glass of carrot juice', '2 glasses of mineral water', '2 glasses of water']));
+
+    // best solution
+    function hydrate(arr){
+      let glasses = 0;
+      arr.forEach(el=> glasses += parseInt(el));
+      return glasses * 200 + ' ml';
+    }
