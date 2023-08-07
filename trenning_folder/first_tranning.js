@@ -1836,3 +1836,12 @@ function evensAndOdds(num){
       return (marks.reduce((x, y) => x + y)/marks.length).toFixed(1)
       }
       console.log(average([4, 3, 4, 5, 4]));
+
+// Найти площадь кольца
+function ringSquare(r1, r2){
+// let s1 = Math.PI * r1**2;
+// let s2 = Math.PI * r2**2;
+// return +(s1 - s2).toFixed(2)
+return +(Math.PI * (r1**2 - r2**2)).toFixed(2)
+}
+console.log(ringSquare(5, 4));
