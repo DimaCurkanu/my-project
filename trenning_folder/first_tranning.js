@@ -1845,3 +1845,7 @@ function ringSquare(r1, r2){
 return +(Math.PI * (r1**2 - r2**2)).toFixed(2)
 }
 console.log(ringSquare(5, 4));
+// вернууть массив, отформатировав кажджый элемент до IDX знаков после запятой
+function formatArray(arr){
+  return arr.map((x,idx) => +(x).toFixed(idx));
+  }
