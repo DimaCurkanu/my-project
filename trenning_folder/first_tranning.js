@@ -1830,3 +1830,9 @@ function evensAndOdds(num){
     function excludingVatPrice(price){
       return price == null? -1 : +(price / 1.15).toFixed(2);
     }
+// средний бал в любом массиве
+    function average(marks){
+      
+      return (marks.reduce((x, y) => x + y)/marks.length).toFixed(1)
+      }
+      console.log(average([4, 3, 4, 5, 4]));
