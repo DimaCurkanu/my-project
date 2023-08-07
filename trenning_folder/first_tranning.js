@@ -1818,3 +1818,11 @@ function evensAndOdds(num){
   function convertNumber(num, n){
     return n>1 && n<37 ? num.toString(n): undefined 
     }
+    //The function bar_triang() or barTriang or bar-triang, 
+    // receives the coordinates of the three vertices A, B and C  as 
+    // three different arguments and outputs the coordinates of the barycenter O in an array [xO, yO]
+    function barTriang(p1, p2, p3){
+      let a = +((p1[0]+p2[0]+p3[0])/3).toFixed(4);
+      let b = +((p1[1]+p2[1]+p3[1])/3).toFixed(4);
+      return [a, b]
+    }
