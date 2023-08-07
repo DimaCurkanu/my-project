@@ -1826,3 +1826,7 @@ function evensAndOdds(num){
       let b = +((p1[1]+p2[1]+p3[1])/3).toFixed(4);
       return [a, b]
     }
+    //Write a function that calculates the original product price, without VAT.
+    function excludingVatPrice(price){
+      return price == null? -1 : +(price / 1.15).toFixed(2);
+    }
