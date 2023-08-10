@@ -1934,3 +1934,17 @@ function quadratic(x1, x2){
   return [a, b, c];
 }
 console.log(quadratic(-4, -9));
+//создать массів із чісел от 1 до n
+function createArray(n){
+let arr = [];
+for (i=1; i<=n; i++) {
+  arr.push(i)
+}
+return arr
+}
+console.log(createArray(10));
+// short solution:::::
+function createArray(n){
+  return Array.from({length: n}, (v, i) => i+1);
+}
+console.log(createArray(10))
