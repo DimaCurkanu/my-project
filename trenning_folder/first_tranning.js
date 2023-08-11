@@ -1948,3 +1948,23 @@ function createArray(n){
   return Array.from({length: n}, (v, i) => i+1);
 }
 console.log(createArray(10))
+/// вернуть массив с чередованием положительных и отрицательных чисел
+
+  function alternationArray(n){
+    let arr = [0];
+    for (i=1; i<=n; i++) {
+    if (i %2 == 0) arr.push(i);
+    if (i %2 != 0) arr.push(-i);
+    }
+    return arr
+    }
+    console.log(alternationArray(6));
+// more sollution::::::::
+function alternationArray(n){
+  let arr = []
+  for(let i = 0; i <= n; i++) {
+  arr[i] = (i % 2 === 0) ? i : -i
+}
+return arr
+}
+
