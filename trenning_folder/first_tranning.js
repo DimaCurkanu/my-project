@@ -2004,3 +2004,5 @@ const arrCheck = value => {
   return true
 }
 console.log(arrCheck([[1], [2], 66, [4]]));
+///// in ONE srting!!!! >>>>>>>>>>>>>>>>>>>>>>>
+const arrCheck = a => a.every(Array.isArray) ;
