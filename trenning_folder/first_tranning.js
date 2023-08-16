@@ -1968,3 +1968,23 @@ function alternationArray(n){
 return arr
 }
 
+///// вернуть тип аргумента в лоу кейсе
+function type(value) {
+  function type(value) {
+    if ({}.toString.call(value) == '[object Array]') return 'array';
+    if ({}.toString.call(value) == '[object Number]') return 'number';
+    if ({}.toString.call(value) == '[object String]') return 'string';
+    if ({}.toString.call(value) == '[object Boolean]') return 'boolean';
+    if ({}.toString.call(value) == '[object Date]') return 'date';
+    if ({}.toString.call(value) == '[object Null]') return 'null';
+    if ({}.toString.call(value) == '[object Object]') return 'object';
+    if ({}.toString.call(value) == '[object Undefined]') return 'undefined';
+  }
+}
+//console.log(a);
+console.log(type([]));
+console.log(typeof(type([])));
+// а надо так:
+function type(value) {
+  return {}.toString.call(value).slice(8, -1).toLowerCase();
+}
