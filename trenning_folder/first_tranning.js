@@ -2076,3 +2076,12 @@ function firstNonConsecutive(arr) {
   console.log(firstNonConsecutive([-7,-6,-4,-3,-2,-1,1,2]));
   ////////////
   firstNonConsecutive = arr => arr.length == 1 ? null : arr[0] + 1 != arr[1] ? arr[1] : firstNonConsecutive(arr.slice(1)) 
+///In this Kata your task will be to return the count of pairs that have consecutive numbers as follows:
+function pairs(array, count = 0) {
+  for (let i = 0; i < array.length; i += 2)
+    if (Math.abs(array[i] - array[i + 1]) === 1)
+      count += 1;
+  return count;
+}
+    
+  console.log(pairs([21, 20, 22, 40, 39, -56, 30, -55, 95, 94]));
