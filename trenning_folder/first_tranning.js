@@ -2005,4 +2005,25 @@ const arrCheck = value => {
 }
 console.log(arrCheck([[1], [2], 66, [4]]));
 ///// in ONE srting!!!! >>>>>>>>>>>>>>>>>>>>>>>
-const arrCheck = a => a.every(Array.isArray) ;
+//const arrCheck = a => a.every(Array.isArray) ;
+
+/// Consider an array/list of sheep where some sheep may be missing from their place. 
+//We need a function that counts the number of sheep present in the array (true means present).
+function countSheeps(arrayOfSheep) {
+  let count = 0;
+  for (i=0; i<=arrayOfSheep.length; i++) {
+    if(arrayOfSheep[i] == true)
+    count++
+  }
+  return count
+}
+console.log(countSheeps([true,  true,  true,  false,
+              true,  true,  true,  true ,
+              true,  false, true,  false,
+              true,  false, false, true ,
+              true,  true,  true,  true ,
+              false, false, true,  true ]))
+    /// SUPER SOLUTION :::
+    function countSheeps(arrayOfSheeps) {
+  return arrayOfSheeps.filter(Boolean).length;
+}
