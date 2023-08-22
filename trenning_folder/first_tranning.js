@@ -2027,3 +2027,31 @@ console.log(countSheeps([true,  true,  true,  false,
     function countSheeps(arrayOfSheeps) {
   return arrayOfSheeps.filter(Boolean).length;
 }
+//You have stumbled across the divine pleasure that is owning a dog and a garden. Now time to pick up all the cr@p! :D
+// Given a 2D array to represent your garden, you must find and collect all of the dog cr@p - represented by '@'.
+// You will also be given the number of bags you have access to (bags), and the capactity of a bag (cap). 
+//If there are no bags then you can't pick anything up, so you can ignore cap.
+// You need to find out if you have enough capacity to collect all the cr@p and make your garden clean again.
+// If you do, return 'Clean', else return 'Cr@p'.
+// Watch out though - if your dog is out there ('D'), he gets very touchy about being watched. 
+//If he is there you need to return 'Dog!!'.
+
+//========================================================================================
+function crap(x, bags, cap){
+  let count = 0;
+  let y = x.flat()
+  for (i=0; i <= y.length; i++) {
+    if(y[i] == 'D') return "Dog!!";
+    if(y[i] == '@') {
+      count ++
+    }
+    }
+  return count <= bags * cap? "Clean": "Cr@p"
+  }
+  
+  console.log(crap([['_','_','_','_'], ['_','_','_','@'], ['_','_','@', '_']], 2, 2));
+  ////
+  crap=(a,b,c)=>(a+"").includes("D")?"Dog!!":(a+"").split("@").length-1<=b*c?"Clean":"Cr@p"
+  ////
+  const crap = (x, bags, cap) =>
+  `${x}`.includes(`D`) ? `Dog!!` : `${x}`.split(`@`).length > bags * cap ? `Cr@p` : `Clean`;
