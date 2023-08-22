@@ -2066,3 +2066,13 @@ function crap(x, bags, cap){
 function findDifference(a, b) {
   return Math.abs((a[0] * a[1] * a[2]) - (b[0] * b[1] * b[2]))
 }
+//------------=======00======================
+function firstNonConsecutive(arr) {
+  for (i=0; i <= arr.length; i++) {
+    if (arr[i+1] - arr[i] > 1) return arr[i+1]
+  }
+    return null
+  }
+  console.log(firstNonConsecutive([-7,-6,-4,-3,-2,-1,1,2]));
+  ////////////
+  firstNonConsecutive = arr => arr.length == 1 ? null : arr[0] + 1 != arr[1] ? arr[1] : firstNonConsecutive(arr.slice(1)) 
