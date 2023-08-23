@@ -2085,3 +2085,26 @@ function pairs(array, count = 0) {
 }
     
   console.log(pairs([21, 20, 22, 40, 39, -56, 30, -55, 95, 94]));
+
+
+  // Alice's band plays a Nirvana inspired grunge and has been rated 20 for Heaviness, 
+//   32 for Originality and only 18 for Outfits. Bob listens to Slayer and has gotten a good 48 for Heaviness, 
+//   25 for Originality and a rather honest 40 for Outfits.
+
+// The total score should be followed by a colon : and by one of the following quotes: 
+// if Alice's band wins: Alice made "Kurt" proud! if Bob's band wins: 
+// Bob made "Jeff" proud! if they end up with a draw: that looks like a "draw"! Rock on!
+
+// The solution to the example above should therefore appear like '1, 2: Bob made "Jeff" proud!'.
+function solve(a, b) {
+let countA = 0;
+let countB = 0;
+for (i=0; i <= 3; i++) {
+  if(a[i] > b[i]) countA++;
+  if(a[i] < b[i]) countB++;
+}
+  return countA > countB ? `${countA}, ${countB}: Alice made "Kurt" proud!` 
+  : countB > countA ? `${countA}, ${countB}: Bob made "Jeff" proud!`
+  : `${countA}, ${countB}: that looks like a "draw"! Rock on!`
+  }
+  console.log(solve([47, 7, 2], [47, 7, 2]));
